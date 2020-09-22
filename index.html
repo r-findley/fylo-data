@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--              CSS                 -->
+    <link rel="stylesheet" href="./styles/main.css" />
     <!--          Google Font             -->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
@@ -16,42 +18,35 @@
     />
 
     <title>Frontend Mentor | Fylo data storage component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <section class="title">
-      <h1><img src="./images/logo.svg" alt="Fylo logo" class="logo" /></h1>
-      <img
-        src="./images/icon-document.svg"
-        alt="Icon showing a document"
-        class="icons"
-      />
-      <img
-        src="./images/icon-folder.svg"
-        alt="Icon showing a folder"
-        class="icons"
-      />
-      <img
-        src="./images/icon-upload.svg"
-        alt="Upload icon showing an arrow in a cloud"
-        class="icons"
-      />
-    </section>
-    <section class="storage">
-      <p>You’ve used 815 GB of your storage</p>
-      <p class="current">185 GB Left</p>
-      <p><span id="min">0 GB</span> <span id="max">1000 GB</span></p>
-    </section>
+    <div class="container">
+      <section class="title">
+        <h1><img src="./images/logo.svg" alt="Fylo logo" class="logo" /></h1>
+        <div class="icons">
+          <img src="./images/icon-document.svg" alt="Icon showing a document" />
+        </div>
+        <div class="icons">
+          <img src="./images/icon-folder.svg" alt="Icon showing a folder" />
+        </div>
+        <div class="icons">
+          <img
+            src="./images/icon-upload.svg"
+            alt="Upload icon showing an arrow in a cloud"
+          />
+        </div>
+      </section>
+      <section class="storage">
+        <p>You’ve used 815 GB of your storage</p>
+        <div class="bar"><div class="gradient"></div></div>
+        <p class="range">
+          <span id="min">0 GB</span> <span id="max">1000 GB</span>
+        </p>
+        <div class="current">
+          <p>185 <sup>GB Left</sup></p>
+        </div>
+      </section>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
