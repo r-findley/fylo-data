@@ -154,6 +154,7 @@ body {
   font-size: 14px;
   height: 100%;
   margin: 0 auto;
+  overflow-y: hidden;
   width: 375px;
 }
 /* 
@@ -164,7 +165,9 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin-top: 127px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .icons {
@@ -215,6 +218,8 @@ section {
   height: 20px;
   margin: 13px auto;
   width: 260px;
+  display: flex;
+  align-items: center;
 }
 
 .gradient {
@@ -226,10 +231,8 @@ section {
   border-radius: 10px;
   display: flex;
   height: 14px;
-  justify-items: right;
-  margin: 0.1rem;
-  padding-top: 1px;
   width: 208px;
+  margin-left: 3px;
 }
 .current {
   background-color: white;
@@ -281,3 +284,72 @@ section {
    Media Query
    ==========================
 */
+@media screen and (min-width: 975px) {
+  html {
+    background-color: var(--neutral-very-dark-blue);
+    background-image: url(/images/bg-desktop.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    height: 100%;
+  }
+
+  body {
+    background-image: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .title {
+    width: 345px;
+    margin-right: 25px;
+  }
+
+  .storage {
+    width: 540px;
+    margin-top: 45px;
+    position: relative;
+  }
+
+  .bar {
+    width: 450px;
+  }
+
+  .gradient {
+    width: 340px;
+  }
+
+  .storage p {
+    text-align: left;
+    margin-left: 18px;
+  }
+
+  #max {
+    margin-right: 14px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+  .current {
+    position: absolute;
+    right: 9%;
+    bottom: 75%;
+    border-bottom-right-radius: 0;
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-top: 25px solid white;
+    position: absolute;
+    right: 9%;
+    bottom: 70%;
+  }
+}
